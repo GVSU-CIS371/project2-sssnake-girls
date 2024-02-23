@@ -91,8 +91,7 @@ main {
 }
 
 .image-container {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
   min-height: 200px;
   min-width: 200px;
   width: 200px;

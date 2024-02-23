@@ -15,8 +15,6 @@ function renderProducts(prods: Product[]): void {
     for(let p of prods){
         const storeItem = document.createElement("div");
         storeItem.innerHTML = `${generateProductHTML(p)}`;
-        storeItem.style.display = "grid";
-        
         const mainContainer = document.getElementById("main-container");
         mainContainer.appendChild(storeItem);
     }
