@@ -2,7 +2,9 @@ import { Product, products } from "./data";
 
 function generateProductHTML(product: Product): string {
     return `<div class="store-item">
+              <container class="image-container">
               <img src="${product.image}" alt="${product.name}" />
+              </container>
               <p>${product.name}</p>
               <p>${product.description}</p>
               <span>${product.rating}/5</span><span>$${product.price}</span><span>stock ${product.stock}</span>
@@ -10,11 +12,19 @@ function generateProductHTML(product: Product): string {
 }
 
 function renderProducts(prods: Product[]): void {
-    // your code
+    for(let p of prods){
+        const storeItem = document.createElement("div");
+        storeItem.innerHTML = `${generateProductHTML(p)}`;
+        storeItem.style.display = "grid";
+        
+        const mainContainer = document.getElementById("main-container");
+        mainContainer.appendChild(storeItem);
+    }
 }
 
 function getByCategory(category: string): void {
-    // your code
+    const newProds: Product[] = products.filter((p)=>p.category==`${category}`);
+    renderProducts(newProds);
 }
 
 function getByRating(minRating: number): void {
