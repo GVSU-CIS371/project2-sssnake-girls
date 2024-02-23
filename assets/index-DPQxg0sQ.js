@@ -5,4 +5,4 @@
               <p>${r.name}</p>
               <p>${r.description}</p>
               <span>${r.rating}/5</span><span>$${r.price}</span><span>stock ${r.stock}</span>
-            </div>`}function p(r){for(let o of r){const i=document.createElement("div");i.innerHTML=`${c(o)}`,i.style.display="grid",document.getElementById("main-container").appendChild(i)}}p(s);
+            </div>`}function p(r){for(let o of r){const i=document.createElement("div");i.innerHTML=`${c(o)}`,document.getElementById("main-container").appendChild(i)}}p(s);
