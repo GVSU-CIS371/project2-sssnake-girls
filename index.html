@@ -29,8 +29,17 @@
         import { renderProducts, getByCategory, getByRating } from './src/data-controller.ts';
         renderProducts(products);
 
-        // Bind click events using .addEventListener to the navigation links. Upon clicking:
+      document.getElementById("electronics").addEventListener
+      ("click", () => getByCategory("Electronics"))
 
+      document.getElementById("clothing").addEventListener
+      ("click", () => getByCategory("Clothing"))
+
+      document.getElementById("groceries").addEventListener
+      ("click", () => getByCategory("Groceries"))
+
+      document.getElementByCategory(bestSeller).addEventListener
+      ("click", () => getByRating(4.5))
         // - "Electronics" should display all products categorized as "Electronics."
         // - "Clothing" should display all products categorized as "Clothing."
         // - "Groceries" should display all products categorized as "Groceries."
